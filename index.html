@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Birthday Soniya 🎂</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Dancing+Script:wght@600;700&display=swap">
+  <link rel="stylesheet" href="./style.css?v=5">
+</head>
+<body>
+  <audio id="bg-music" src="song.mp3" loop preload="auto"></audio>
+
+  <div id="stars"></div>
+  <div id="moon"></div>
+  <div id="floaters"></div>
+  <canvas id="confetti"></canvas>
+
+  <!-- Intro screen -->
+  <div id="intro">
+    <div class="intro-card">
+      <div class="intro-cake">🎂</div>
+      <h1>Happy Birthday</h1>
+      <h2>Soniya</h2>
+      <p id="intro-count"></p>
+      <button id="open-btn">Tap to open 🎁</button>
+    </div>
+  </div>
+
+  <!-- Papers: sab beech mein pile. Neeche wala pehle, upar wala sabse last.
+       data-x / data-y = beech se thoda hatna (px), data-r = tilt -->
+  <main id="board">
+
+
+    <div class="paper image" data-x="-10" data-y="-6" data-r="-5">
+      <p>"Happy Birthday Soniya! ✨ May this year be your best chapter yet."</p>
+      <img src="images/5.jpg" alt="" draggable="false">
+    </div>
+
+    
+
+    <div class="paper image" data-x="-10" data-y="-6" data-r="-5">
+      <p>"Many happy returns of the day, Soniya. Have a lovely day ahead!"</p>
+      <img src="images/4.jpg" alt="" draggable="false">
+    </div>
+    
+    
+    <div class="paper image" data-x="-10" data-y="-6" data-r="-5">
+      <p>"Happy Birthday Soniya. Hope this year is full of good things for you."</p>
+      <img src="images/3.jpg" alt="" draggable="false">
+    </div>
+
+
+
+    <div class="paper image" data-x="14" data-y="8" data-r="4">
+      <p>"Wishing you a very happy birthday, Soniya. Stay happy and keep smiling."</p>
+      <img src="images/2.jpg" alt="" draggable="false">
+    </div>
+
+
+
+    <div class="paper image" data-x="-4" data-y="16" data-r="-2">
+      <p>"Happy Birthday Soniya. Wishing you lots of happiness and success this year."</p>
+      <img src="images/1.jpg" alt="" draggable="false">
+    </div>
+
+
+
+    <div class="paper note red" data-x="-24" data-y="34" data-r="-6">
+      <p class="big">and My Favorite</p>
+      <p class="big">Person 😍</p>
+    </div>
+
+
+
+    <div class="paper note" data-x="26" data-y="-30" data-r="5">
+      <p class="big">"Happy Birthday Soniya. Take care and have a great year ahead."</p>
+      <p class="big"> <span class="red-heart">❤️</span></p>
+    </div>
+
+
+
+    <div class="paper note cake" data-x="0" data-y="40" data-r="3">
+      <div class="cake-emoji">🎂</div>
+      <p class="small">Tap me 🎉</p>
+    </div>
+
+
+
+    <div class="paper note" data-x="-8" data-y="-48" data-r="-3">
+      <p class="big" id="countdown">...</p>
+    </div>
+
+
+
+    <div class="paper note title" data-x="0" data-y="0" data-r="-2">
+      <p class="big">Happy Birthday</p>
+      <p class="big">Soniya 🎂</p>
+      <p class="small">Papers ko drag karke hatao, photo pe tap karo for Big photo </p>
+    </div>
+
+  </main>
+
+  <!-- All photos grid (sirf nayi photos) -->
+  <div id="gallery">
+    <div class="gal-head">
+      <span id="gal-title">my Favorite Photos 📸</span>
+      <button id="gal-close" aria-label="Close">✕</button>
+    </div>
+    <div id="gal-grid"></div>
+  </div>
+
+  <!-- Bada viewer -->
+  <div id="lightbox">
+    <button class="lb-btn lb-close" id="lb-close" aria-label="Close">✕</button>
+    <button class="lb-btn lb-prev" id="lb-prev" aria-label="Previous">‹</button>
+    <div class="lb-frame">
+      <img id="lb-img" src="" alt="">
+      <div id="lb-cap"></div>
+      <div id="lb-count"></div>
+    </div>
+    <button class="lb-btn lb-next" id="lb-next" aria-label="Next">›</button>
+  </div>
+
+  <button id="gallery-btn">📸 my Favorite Photos</button>
+  <button id="theme-btn" aria-label="Day / Night">☀️</button>
+  <button id="music-btn" aria-label="Music on/off">🎵</button>
+
+  <script src="./script.js?v=5"></script>
+</body>
+</html>
